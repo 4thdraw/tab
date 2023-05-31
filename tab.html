@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{ margin: 0; padding: 0;}
+        li{ list-style: none;}
+        .d-flex{ display: flex;}
+        .rel{position: relative;}
+        .abs{ position: absolute;}
+        #tab{ border:1px solid #000; height: 200px; width:300px }
+        #tab h2{ font-size: 20px; line-height: 2;}
+        #tab ul{
+            left:0;
+            top:40px;
+            background-color: white;
+            padding: 1rem;
+            right:0;
+            border-top:1px solid #000;
+            bottom:0;
+            display: none;
+        }
+        .notice ul{ flex-direction: column;}
+        #tab li.on ul{ display: flex;} 
+        #tab li.on h2{ color:red}
+    </style>
+    <script
+    src="https://code.jquery.com/jquery-2.2.4.js"
+    integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+    crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $('#tab h2').click(function(){
+                $("#tab li").removeClass('on');
+                $(this).parent().addClass('on')
+            })
+        })
+    </script>
+</head>
+<body>
+    <ul class="d-flex rel" id="tab">
+        <li class="notice on">
+            <h2>공지사항</h2>
+            <ul class="abs ">
+                <li><a href="">공지사항제목글노출되라</a></li>
+                <li><a href="">공지사항제목글노출되라</a></li>
+                <li><a href="">공지사항제목글노출되라</a></li>
+                <li><a href="">공지사항제목글노출되라</a></li>
+            </ul>
+        </li>
+        <li class="gallery">
+            <h2>갤러리</h2>
+            <ul class="abs">
+                <li><a href="">이미지</a></li>
+                <li><a href="">이미지</a></li>
+                <li><a href="">이미지</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

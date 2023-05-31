@@ -1,0 +1,20 @@
+#gnb{
+	display: flex;
+	align-items: center;
+	li{
+		margin: 0 15px;
+		position: relative;
+		a{
+			display: block;
+			font-size: 22px;
+		}
+		ul{
+			position: absolute;
+			li {
+				a{
+					font-size: 16px;
+				}
+			}
+		}
+	}
+}
